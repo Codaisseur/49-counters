@@ -41,5 +41,6 @@ As a user I want to sort the counter by the value of the counter
   - in App.js
     - add currentCount to the counters array, and to Counter props
     - add a new function incrementCount mapped to the callback prop
+    - increment the counter when the button is clicked
     - move counters array to useState, because we want the DOM to update when this variable changes
     - sort the counters

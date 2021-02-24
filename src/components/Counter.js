@@ -2,8 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Counter.scss";
 
-export default function Counter({ name, description }) {
-  const [currentCount, setCurrentCount] = useState(0);
+export default function Counter({
+  name,
+  description,
+  currentCount,
+  incrementCount,
+}) {
   const [advice, setAdvice] = useState("");
 
   useEffect(() => {
@@ -19,13 +23,7 @@ export default function Counter({ name, description }) {
       <h3>{name}</h3>
       <h4>{description}</h4>
       <p>Current count: {currentCount}</p>
-      <button
-        onClick={() => {
-          setCurrentCount(currentCount + 1);
-        }}
-      >
-        Increment
-      </button>
+      <button onClick={incrementCount}>Increment</button>
       <p>{advice}</p>
     </div>
   );
