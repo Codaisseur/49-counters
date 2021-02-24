@@ -24,3 +24,10 @@ As a user I want an app that displays a list of 4 counters, each with their own 
     - return an instance of the counter component
     - pass into counter component name and description
 
+As a user I want to display a random piece of advice in each counter.
+  The random piece of advice should come from this API: https://api.adviceslip.com/advice
+
+- npm install axios
+- Counter:
+  - state: advice
+  - fetch data inside useEffect and then setAdvice
