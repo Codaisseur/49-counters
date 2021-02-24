@@ -31,3 +31,15 @@ As a user I want to display a random piece of advice in each counter.
 - Counter:
   - state: advice
   - fetch data inside useEffect and then setAdvice
+
+As a user I want to sort the counter by the value of the counter
+- lift state from Counter.js to App.js
+  - in Counter.js
+    - remove useState for currentCount
+    - change currentCount -> prop
+    - change setCurrentCount -> callback prop
+  - in App.js
+    - add currentCount to the counters array, and to Counter props
+    - add a new function incrementCount mapped to the callback prop
+    - move counters array to useState, because we want the DOM to update when this variable changes
+    - sort the counters
