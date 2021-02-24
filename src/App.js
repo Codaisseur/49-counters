@@ -11,8 +11,12 @@ function App() {
 
   return (
     <div className="App">
-      {counters.map(counter => (
-        <Counter name={counter.name} description={counter.description} />
+      {counters.map((counter, index) => (
+        <Counter
+          key={index}
+          name={counter.name}
+          description={counter.description}
+        />
       ))}
     </div>
   );
